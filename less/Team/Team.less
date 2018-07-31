@@ -1,3 +1,18 @@
+@import url(../variables);
+
 .Team {
-	
+	background: @team;
+
+	&-cards{
+		padding-top: 75px;
+	}
+	&-Item {
+		width: calc(100% / 4 - 40px);
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+	&-ItemPhoto{
+		width: 200px;
+		height: 200px;
+	}
 }
