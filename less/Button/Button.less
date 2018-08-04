@@ -1,3 +1,33 @@
+@import url(../variables);
+
 .Button {
+	padding-top: 20px;
+	text-align: center;
 	
+	&-btn {
+		width: 293px;
+		height: 70px;
+		border-radius: 5px;
+		border: none;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26.19px;
+		text-transform: uppercase;
+		letter-spacing: 0.27px;
+		color: @white;
+		font-family: 'Titillium Web', sans-serif;
+
+		&--orange {
+			background: @orange;
+			border-bottom: 4px solid #c86a40;
+		}
+		&--lightblue {
+			background: @lightblue;
+			border-bottom: 4px solid #299ec4;
+		}
+		&--sea {
+			background: @sea;
+			border-bottom: 4px solid #14a58b;
+		}
+	}
 }

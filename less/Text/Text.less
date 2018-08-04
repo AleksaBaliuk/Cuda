@@ -2,6 +2,7 @@
 
 
 .Text {
+	position: relative;
 	text-align: center;
 
 	&-navi {
@@ -45,9 +46,11 @@
 	
 		&--blue {
 			color:@lightblue;
+			line-height: 0;
 		}
 		&--lightorange {
 			color: @lightorange;	
+			line-height: 0;
 		}
 		&--grey {
 			color: @grey;	
@@ -141,5 +144,7 @@
 
 	&--alignLeft {
 		text-align: left;
+		padding-left: 145px;
+    	padding-right: 57px;
 	}
 }
