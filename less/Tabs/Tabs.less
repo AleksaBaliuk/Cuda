@@ -1,9 +1,25 @@
 .Tabs {
+	
+	&-caption {
+		
 
-	.tabs__content {
-	  display: none; /* по умолчанию прячем все блоки */
 	}
-	.tabs__content.active {
-	  display: block; /* по умолчанию показываем нужный блок */
+
+	&-content {
+	  display: none; 
+	  width: 100%;
+
+	  &.Tabs-captionButton--active {
+	  	display: flex; 
+	  	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+		}
 	}
+
+	&-contentItem {
+		width: calc(100% / 2);
+	}
+	
 }

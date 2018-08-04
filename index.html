@@ -239,21 +239,79 @@
 					<h2 class="Text-sectName Text-sectName--eclipse u-textLine--portfolio">OUR PORTFOLIO</h2>
 					<p class="Text-sub Text-sub--eclipse">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet <br> consectetur, adipisci velit, sed quia non numquam</p>
 				</div>
-				<div class="Portfolio-tabs">
-				  <div class="tabs__caption">
-				    <button class="active">1-я вкладка</button>
-				    <button>2-я вкладка</button>
-				    <button>3-я вкладка</button>
-				  </div>
-				  <div class="tabs__content active">
-				    Содержимое первого блока
-				  </div>
-				  <div class="tabs__content">
-				    Содержимое второго блока
-				  </div>
-				  <div class="tabs__content">
-				    Содержимое третьего блока
-				  </div>
+				<div class="Portfolio-tabs  ">
+					<div class="Tabs u-flexCenter">
+						<div class="Tabs-caption u-wrapper u-flexCenter	">
+						  	<button class="Tabs-captionButton Tabs-captionButton--active">1-я вкладка</button>
+						  	<button class="Tabs-captionButton">2-я вкладка</button>
+						  	<button class="Tabs-captionButton">3-я вкладка</button>
+				  		</div>
+				  		<div class="test u-flexSpace u-wrapper">
+				  			<div class="Tabs-content Tabs-captionButton--active">
+					  		<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio1.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Isometric Perspective Mock-Up</h2>
+						    	</div>
+					  		</div>
+					    	<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio2.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Time Zone App UI</h2>
+						    	</div>
+					  		</div>
+					  		<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio3.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Viro Media Players UI</h2>
+						    	</div>
+					  		</div>
+					  		<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio4.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Blog / Magazine Flat UI Kit</h2>
+						    	</div>
+					  		</div>
+					  	</div>
+					  	<div class="Tabs-content ">
+					    	<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio2.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Blog / Magazine Flat UI Kit</h2>
+						    	</div>
+					  		</div>
+					  		<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio4.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Blog / Magazine Flat UI Kit</h2>
+						    	</div>
+					  		</div>
+					  	</div>
+					  	<div class="Tabs-content ">
+					   		<div class="Tabs-contentItem">
+					  			<div class="Tabs-contentImage">
+						    		<img src="img/portfolio3.png" alt="img">
+						    	</div>
+						    	<div class="Tabs-contentText">
+						    		<h2 class="Text-cardName">Blog / Magazine Flat UI Kit</h2>
+						    	</div>
+					  		</div>
+					  	</div>
+				  		</div>
+					  	
+					</div>
 				</div><!-- .tabs-->
 				<div class="Button">
 					<button class="Button-btn Button-btn--sea">LOAD MORE PROJECTS</button>
@@ -348,10 +406,10 @@
 	(function($) {
 	$(function() {
 	 
-	  $('div.tabs__caption').on('click', 'button:not(.active)', function() {
+	  $('div.Tabs-caption').on('click', 'button:not(.Tabs-caption--active)', function() {
 	    $(this)
-	      .addClass('active').siblings().removeClass('active')
-	      .closest('div.Portfolio-tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+	      .addClass('Tabs-captionButton--active').siblings().removeClass('Tabs-captionButton--active')
+	      .closest('div.Tabs').find('div.Tabs-content').removeClass('Tabs-captionButton--active').eq($(this).index()).addClass('Tabs-captionButton--active');
 	  });
 	 
 	});
