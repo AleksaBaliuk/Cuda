@@ -57,6 +57,10 @@
 		&--lightorange {
 			color: @lightorange;	
 			line-height: 0;
+
+			@media (max-width: 720px) {
+				line-height: 1;
+			}
 		}
 		&--grey {
 			color: @grey;	
@@ -194,5 +198,10 @@
 		text-align: left;
 		padding-left: 145px;
     	padding-right: 57px;
+
+    	@media (max-width: 430px) {
+    		padding-left: 109px;
+    		padding-right: 0;
+    	}
 	}
 }

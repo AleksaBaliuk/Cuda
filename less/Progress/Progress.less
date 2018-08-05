@@ -16,10 +16,10 @@
  		&::before {
     	position: absolute;
     	content: '';
-    		@if @progress > 180 {
+    		& when (@progress > 180) {
     			background-color: @accent;
     		}
-    		@if @progress <= 180 {
+    		& when (@progress =< 180) {
     			background-color: @gray;
     		}
     	width: @diameter;
@@ -27,11 +27,11 @@
     	border-radius: 50%;
     	clip: rect(0,calc(@diameter / 2), @diameter, 0);
     	transform-origin: 50% 50%;
-    		@if @progress <= 180 {
-     			transform: rotate(calc(180 + @progress)deg);
+    		& when (@progress =< 180) {
+     			transform: rotate(~"180 + @{progress}deg");
     		}
-    		@if @progress > 180 {
-    			transform: rotate(calc(180 + @progress)deg);
+    		& when (@progress > 180) {
+    			transform: rotate(~"180 + @{progress} - 180deg");
     		}
     	z-index: 1;
   		}
@@ -51,7 +51,7 @@
   		background-color: @lightblue;
 
   		&::before {
-  			@if @progress > 180 {
+  			& when (@progress > 180) {
     			background-color: @lightblue;
     		}
   		}
@@ -60,27 +60,54 @@
   		background-color: #d74680;
 
   		&::before {
-  			@if @progress > 180 {
+  			& when (@progress75 > 180) {
     			background-color: #d74680;
     		}
+        & when (@progress75 =< 180) {
+          background-color: @gray;
+        }
+        & when (@progress75 =< 180) {
+          transform: rotate(~"180 + @{progress75}deg");
+        }
+        & when (@progress75 > 180) {
+          transform: rotate(~"180 + @{progress75} - 180deg");
+        }
   		}
   	}
   	&--sea {
   		background-color: #15c7a8;
 
   		&::before {
-  			@if @progress > 180 {
+  			& when (@progress > 180) {
     			background-color: #15c7a8;
     		}
+        & when (@progress70 =< 180) {
+          background-color: @gray;
+        }
+        & when (@progress70 =< 180) {
+          transform: rotate(~"180 + @{progress70}deg");
+        }
+        & when (@progress70 > 180) {
+          transform: rotate(~"180 + @{progress70} - 180deg");
+        }
   		}
   	}
   	&--orange {
   		background-color: @orange;
 
   		&::before {
-  			@if @progress > 180 {
+  			& when (@progress > 180) {
     			background-color: @orange;
     		}
+        & when (@progress85 =< 180) {
+          background-color: @gray;
+        }
+        & when (@progress85 =< 180) {
+          transform: rotate(~"180 + @{progress85}deg");
+        }
+        & when (@progress85 > 180) {
+          transform: rotate(~"180 + @{progress85} - 180deg");
+        }
   		}
   	}
 	}
@@ -101,5 +128,12 @@
 		content:'';
 		z-index:999;
 		font-size: 45px;
+
+      @media (max-width: 720px) {
+        left: 43%;
+      }
+      @media (max-width: 450px) {
+        left: 40%;
+      }
 		}	
 }
