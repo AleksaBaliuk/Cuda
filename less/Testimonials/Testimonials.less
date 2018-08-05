@@ -4,11 +4,16 @@
 	background: @testimon;
 
 	&-cards{
-		padding-top: 75px;
+		
 		text-align: left;
 	}
 	&-item {
 		width: calc(100% / 2);
+		padding-top: 75px;
+
+		@media (max-width: 720px) {
+	    	width: 100%;
+	    }
 	}
 
 	&-itemDesc {

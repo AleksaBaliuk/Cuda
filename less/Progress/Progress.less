@@ -6,94 +6,94 @@
 
 	&-bar {
 		position: relative;
-  		width: @diameter;
-  		height: @diameter;
+  	width: @diameter;
+  	height: @diameter;
  		border-radius: 50%;
-  		background-color: @accent;
-  		margin-left: auto;
-    		margin-right: auto;
+  	background-color: @accent;
+  	margin-left: auto;
+    margin-right: auto;
 
  		&::before {
-    		position: absolute;
-    		content: '';
-    			@if @progress > 180 {
-     				background-color: @accent;
-    			}
-    			@if @progress <= 180 {
-      				background-color: @gray;
-    			}
-    		width: @diameter;
-    		height: @diameter;
-    		border-radius: 50%;
-    		clip: rect(0,calc(@diameter / 2), @diameter, 0);
-    		transform-origin: 50% 50%;
-    			@if @progress <= 180 {
-    	 			transform: rotate(calc(180 + @progress)deg);
-    			}
-    			@if @progress > 180 {
-      				transform: rotate(calc(180 + @progress)deg);
-    			}
+    	position: absolute;
+    	content: '';
+    		@if @progress > 180 {
+    			background-color: @accent;
+    		}
+    		@if @progress <= 180 {
+    			background-color: @gray;
+    		}
+    	width: @diameter;
+    	height: @diameter;
+    	border-radius: 50%;
+    	clip: rect(0,calc(@diameter / 2), @diameter, 0);
+    	transform-origin: 50% 50%;
+    		@if @progress <= 180 {
+     			transform: rotate(calc(180 + @progress)deg);
+    		}
+    		@if @progress > 180 {
+    			transform: rotate(calc(180 + @progress)deg);
+    		}
     	z-index: 1;
   		}
  		&::after {
-    		position: absolute;
-    		content: '';
-    		background-color: @gray;
-    		width: @diameter;
-    		height: @diameter;
-    		border-radius: 50%;
-    		clip: rect(0, calc(@diameter / 2), @diameter, 0);
-    		transform-origin: 50% 50%;
-    		transform: rotate(0deg);
-  		}
+    	position: absolute;
+    	content: '';
+    	background-color: @gray;
+    	width: @diameter;
+    	height: @diameter;
+    	border-radius: 50%;
+    	clip: rect(0, calc(@diameter / 2), @diameter, 0);
+    	transform-origin: 50% 50%;
+    	transform: rotate(0deg);
+  	}
 
-  		&--lightblue {
-  			background-color: @lightblue;
+  	&--lightblue {
+  		background-color: @lightblue;
 
-  			&::before {
-  				@if @progress > 180 {
-     				background-color: @lightblue;
-    			}
-  			}
+  		&::before {
+  			@if @progress > 180 {
+    			background-color: @lightblue;
+    		}
   		}
-  		&--pink {
-  			background-color: #d74680;
+  	}
+  	&--pink {
+  		background-color: #d74680;
 
-  			&::before {
-  				@if @progress > 180 {
-     				background-color: #d74680;
-    			}
-  			}
+  		&::before {
+  			@if @progress > 180 {
+    			background-color: #d74680;
+    		}
   		}
-  		&--sea {
-  			background-color: #15c7a8;
+  	}
+  	&--sea {
+  		background-color: #15c7a8;
 
-  			&::before {
-  				@if @progress > 180 {
-     				background-color: #15c7a8;
-    			}
-  			}
+  		&::before {
+  			@if @progress > 180 {
+    			background-color: #15c7a8;
+    		}
   		}
-  		&--orange {
-  			background-color: @orange;
+  	}
+  	&--orange {
+  		background-color: @orange;
 
-  			&::before {
-  				@if @progress > 180 {
-     				background-color: @orange;
-    			}
-  			}
+  		&::before {
+  			@if @progress > 180 {
+    			background-color: @orange;
+    		}
   		}
+  	}
 	}
 	&-barCenter {
-    	position: absolute;
-    	top: @border;
-    	left: @border;
-    	width: calc(@diameter - 2 * @border);
-    	height: calc(@diameter - 2 * @border);
-    	background-color: white;
-    	border-radius: 50%;
-    	z-index: 2;
-  	}
+    position: absolute;
+    top: @border;
+    left: @border;
+    width: calc(@diameter - 2 * @border);
+    height: calc(@diameter - 2 * @border);
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+  }
 	&-text {
   	position: absolute;
 		top:33%;

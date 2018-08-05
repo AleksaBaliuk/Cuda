@@ -1,13 +1,18 @@
+@import url(../variables);
+
 .Tabs {
-	
+	padding-top: 20px;
+
 	&-caption {
 		
 
 	}
-
+	
+	
 	&-content {
 	  display: none; 
 	  width: 100%;
+	  text-align: center;
 
 	  &.Tabs-captionButton--active {
 	  	display: flex; 
@@ -19,7 +24,37 @@
 	}
 
 	&-contentItem {
-		width: calc(100% / 2);
+		width: calc(100% / 2 - 20px);
+		padding-left: 10px;
+	  	padding-right: 10px;
+	  	padding-top: 65px;
+
+	  	@media (max-width: 720px) {
+	  		width: calc(100% - 20px);
+	  	}
 	}
 	
 }
+
+button.Tabs-captionButton {
+		width: 84px;
+		height: 38px;
+		background: #ebcb8d;
+		color: @eclipse;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 19.5px;
+		text-transform: uppercase;
+		letter-spacing: 0.36px;
+		font-family: 'Titillium Web', sans-serif;
+		border-radius: 5px;
+		border: none;
+		transition: all .8s;
+		margin-left: 5px;
+		margin-right: 5px;
+
+		&--active {
+			background: @white;
+			outline: none;
+		}
+	}
